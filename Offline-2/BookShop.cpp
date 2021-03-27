@@ -20,55 +20,110 @@ class BookShop{
 	int count; //tracks currently how many numbers in the shop
 	public:
 		void setName(char* name){
-		/*Set the name of the bookshop to the given name*/	
+		/*Set the name of the bookshop to the given name*/
+		strcpy(this->name,name);	
 		}
 		
 		BookShop(){//Default constructor
 		/*Initialize with size 5 and name to empty string ""*/
+		this->size=5;
+		strcpy(this->name,"");
+		this->count=0;
+		this->books=new Book[size];
 		}
 		
 		BookShop(char* name, int size){//Parameterized constructor
 		/*Initialize with the given name and size*/
+		this->size=size;
+		strcpy(this->name,name);
+		this->count=0;
+		this->books=new Book[size];
 		}
 		
 		BookShop(const BookShop& bs){//Copy constructor
 		/*Write necessary code for the copy constructor*/
+		this->count=bs.count;
+		this->size=bs.size;
+		strcpy(this->name,bs.name);
+		this->books=bs.books;
 		}
 		
 		~BookShop(){//Destructor
-		/*Free memory as applicable*/		
+		/*Free memory as applicable*/
+		delete [] books;		
 		}
 			
 		void addBook(Book b){
 		/*Add book b to the end of the list*/
+		if(this->count<size) {
+		this->books[this->count]=b;
+		this->count++;
+		}
+		else {
+			cout<<"Books cannot be added\n";
+		}
 		}
 		
 		void addBook(Book* ba, int count){			
 		/*Add the given array of books ba to the end of the list*/
+		if((this->count)+count<(this->size)) {
+			for(int i=0;i<count;i++) {
+				this->addBook(ba[i]);
+			}
+		}
+		else { cout<<"Books can not be added to the bookshop"<<'\n'; }
 		}
 
 		Book getBookInfo(char* title){
 		/*Return the **first** book that has the given title. Assume there is atleast one book in the list with the given title*/			
+		for(int i=0;i<(this->count);i++) {
+			if(strcmp(title,this->books[i].getTitle())==0) { Book temp (this->books[i]); return temp; }
+		}
 		}
 		
 		void updateBookPrice(int isbn, int price){			
 		/*Update the price of the book with given isbn to the given price*/
+		for(int i=0;i<(this->count);i++) {
+			if(isbn==this->books[i].getISBN()) { this->books[i].setPrice(price); break; }
+		}
 		}
 		
 		void removeBook(int isbn){
 		/*Remove the book with the given isbn from the list. After removing a book all the books below the removed book will be shifted up, i.e, there will be no hole in the list*/			
+		int pos=-1;
+		for(int i=0;i<(this->count);i++) {
+			if(isbn==this->books[i].getISBN()) { pos=i; break; } 
+		}
+		for(int i=pos;i<(this->count)-1;i++) {
+			this->books[i]=(this->books[i+1]);
+		}
+		this->count=(this->count)-1;
 		}
 				
 		int totalPrice(){
 		/*Return the sum of the prices of all the books in the list*/
+		int tp=0;
+		for(int i=0;i<(this->count);i++) {
+			tp+=this->books[i].getPrice();
+		}
+		return tp;
 		}		
 		
 		void print(){
 		/*Print the bookshop's name followed by information of all the books in the bookshop*/
+		cout<<"Bookshop Name: "<<this->name<<'\n';
+		for(int i=0;i<(this->count);i++) {
+			this->books[i].print();
+		}
 		}
 
 		BookShop mergeShop(BookShop b){
 		/* Return a new bookshop object that will contain all the books of this bookshop and the given bookshop b*/ 			/* Use the title **MergedShop** of the new bookshop														*/	
+		BookShop notun("MergedShop",b.size+this->size);
+		notun.count=b.count+this->count;
+		for(int i=0;i<this->count;i++) { notun.books[i]=this->books[i]; }
+		for(int i=this->count;i<notun.count;i++) { notun.books[i]=b.books[i-(this->count)]; }
+		return notun;
 		}
 };
 
