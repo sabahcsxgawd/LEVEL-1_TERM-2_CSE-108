@@ -45,7 +45,10 @@ class BookShop{
 		this->count=bs.count;
 		this->size=bs.size;
 		strcpy(this->name,bs.name);
-		this->books=bs.books;
+		this->books=new Book[bs.size];
+		for(int i=0;i<bs.count;i++) {
+			this->books[i]=bs.books[i];
+		}
 		}
 		
 		~BookShop(){//Destructor
