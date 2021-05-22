@@ -1,0 +1,125 @@
+Assalamualikum
+amar assignment er topic operator overloading
+ekhane ame kisu key points niye alochona korbo
+
+
+polymorphism c++ er ekta special feature ebong operator overloading ei polymorphism er ekta important branch
+eta ekdhoroner function overloading bola jai
+ekta operator k always kono class er relative e overload kora hoi
+overloading er maddhome c++ operator er functionality and ability extended hoi
+kono overloaded operator tar original meaning / functionality kokhono lose kore na
+operator overloading program simplify korte help kore
+
+
+operator overloading e kisu restrictions o ache
+kisu kisu c++ operator k overload kora jai na jemon 
+1.scope resolution operator
+2.member selection operator
+3.member selection through pointer to function operator
+4.ternary and sizeof operator
+notun kono operator toiri kora jai na tarpor
+kono opertaor er precedence and associativity change kora jai na
+echarao
+kono operator er number of operands change kora jai na and operator functions cannot have default arguments
+
+
+operator overloading er syntax onekta function definition er syntax er motoi
+operator function prototype er prothome return type thakbe jeta same class ba onno kono data type return korbe
+tarpore operator keyword 
+ebong erpore bash jeta kina jei operator overloaded hsse tar symbol dara replaced hobe
+erpore argument list/operands and vitore operator er operations
+operator overloading er function definition e return type er pore jei class er operator function seta likhte hobe
+operator function member/friend function hote pare
+
+
+accha toh binary aar unary operator overload kora jai
+binary operator duita operand niye kaj kore ebong eta dui vabe overload kora jai
+1.member function er maddhome ekta argument diye
+2.friend function use kore duita argument explicitly pass kore
+abar unary operator ekta operand niye kaj kore ebong etakeo dui vabe overload kora jai
+1.member function er maddhome kono argument chara othoba
+2.friend function use kore ekta argument explicitly pass kore jekhane argument ta oi class er object 
+ba tar reference hobe
+
+
+binary opertaor overloading er example hisebe 
+ekhane ekta vector naame class newa hoiyeche jekhane tar tinta component x,y,z ache
+ekhane plus operator k overload kora hoiyeche jaate eta duita vector er component gula add kore resulting vector produce kore
+aar substraction operator k overload kora hoiyeche jaate eta duita vector er component gular difference kore resulting vector produce kore
+example ta run korle ekhane correct output show korse orthat operator gulo successfully overload hoise
+
+
+erpore unary opertaor overloading er example hisebe ager vector class kei use kora hoiyeche
+ekhane prothome plus plus operator k overload kora hoiyeche jeta object er component gular value 1 kore briddhi korbe
+erpore minus operator jeta kina binary operator hisebeo chilo setake overload kora hoiyeche ebong eta component
+gular sign change korche
+erpore abar plus plus operator k overload kora hoise ebong argument e extra ekta default argument dewa hoiyese jaate eta
+component gular post increment korte pare
+code er output theke dekha jacche je unary operator gulo successfully overload hoiyeche 
+
+next example e logical and relational operator overload kora hoiyeche
+ei operator gulor return type true/false hoiye thake tai return type int use kora hoiyeche
+ekhane equal equal operator duita vector er respective component gula soman kina seta check korche
+not equal operator check korche duita vector er respective component gula osoman kina
+logical and operator diye duita vector er respective component gular logical and check kora hocche
+aar logical or operator k overload kore duita vector er respective component gular logical or check kora hocche
+v1 v2 duita vector object er opor overloaded operator gula use kore code ta run korle ei(dandiker) output gula dei jegula correct
+
+
+erpore assignment operator overloading ebong object copy issues
+normally c++ e assignment operator diye object er bitwise copy hoi
+but object class e kono pointer variable thakle destructor call hoi and object copying e jhamela hoi
+ejonno copy constructor use kora holeo seta sudhumatro object initialize korte pare
+ejonno ei copy issues avoid korar jonno assignment operator overload kora joruri
+assignment operator function er important ekta part holo eta this pointer return kore
+aar operator function er parameter pass ebong return korar jonno reference use kora better
+next slide e etar example ebong overloading er age o pore ki difference hoi seta dekhbo
+
+
+ei example e vector class e component hisebe tinta integer pointer x y z newa hoiyeche
+v1 object ke initialize korar por alada scope e v2 vector k initialize kora hoiyeche 
+ebong overloading chara v2 k v1 e assign kora hoiyeche and scope theke ber howar por v2 er pointer destroy hoiye gese
+jar fole code run korar por output e v1 k show korle segmentation fault dicche karon v1 er component j memory
+address k point korse ta already destroyed
+
+
+ebar eki code just assignment operator k overload korar jonno operator function use kora hoiyeche 
+ekhane v2 k v1 e assign korar por v2 tar scope theke ber hoiye jasse jar fole v2 er pointer gulo destroy hoiye gese
+kintu assignment operator overload korar jnno v1 e bitwise copy na hoiye borong v1 er pointer gulor je memory location
+gulo k point korchilo segulo er value update hoiye gese
+code ta run korle v1 er ager and v2 er value assign korar porer output jothajotho ashe orthat overloading successful hoiyeche
+
+
+Thank You.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
