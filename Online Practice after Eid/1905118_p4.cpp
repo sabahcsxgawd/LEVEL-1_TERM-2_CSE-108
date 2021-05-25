@@ -5,8 +5,8 @@ using namespace std;
 ///However, don't delete any member of the inventory class even it is not required to generate the output
 class inventory
 {
-    static int count;
 public:
+    static int count;
     inventory(){cout<<"Parameter-less constructor for inventory class object"<<endl;}
     inventory(int c){cout<<"Parameterized constructor for inventory class object"<<endl; count = c;}
     int get_count(){return count;}
