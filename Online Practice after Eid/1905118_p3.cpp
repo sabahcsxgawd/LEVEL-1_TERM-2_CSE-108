@@ -82,6 +82,7 @@ class serverMaintenanceOfficer : public employee
         cout<<"===Showing details information of maintenance officer: "<<name<<"==="<<'\n';
         showPersonalInfo();
         showDepartmentalInfo();
+        cout<<"Joining Year: "<<joining_year<<'\n';
         cout<<"Per hour salary: "<<per_hour_salary<<'\n';
     }
 
