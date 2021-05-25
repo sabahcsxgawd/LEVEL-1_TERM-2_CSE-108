@@ -63,6 +63,7 @@ class employee : public personalInfo, public departmentInfo
         cout<<"===Showing details information of employee: "<<name<<"==="<<'\n';
         showPersonalInfo();
         showDepartmentalInfo();
+        cout<<"Joining Year: "<<joining_year<<'\n';
     }
 };
 
