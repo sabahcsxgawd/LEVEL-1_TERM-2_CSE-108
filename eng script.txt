@@ -1,0 +1,67 @@
+Blockchain is a type of DLT in which transactions are recorded with an unique cryptographic signature called a hash
+making it difficult or impossible to change, hack, or cheat the system. It works on the principle of the peer-to-peer transaction.
+
+A blockchain is basically a digital ledger of transactions that is duplicated and distributed across the 
+entire network of computer systems on the blockchain. Each block in the chain contains a number of transactions, 
+and every time a new transaction occurs on the blockchain, a record of that transaction is added to every participant’s ledger. 
+The decentralised database managed by multiple participants is known as Distributed Ledger Technology (DLT).
+
+
+This means if one block in one chain was changed, it would be immediately apparent it had been tampered with. 
+If hackers wanted to corrupt a blockchain system, they would have to change every block in the chain, 
+across all of the distributed versions of the chain.
+
+Blockchains such as Bitcoin and Ethereum are constantly and 
+continually growing as blocks are being added to the chain, which significantly adds to the security of the ledger.
+
+
+
+Centralised Ledger: 
+Most companies currently use a centralised database that lives in a fixed location. 
+A centralised database essentially has a single point of failure. it can cause a great blunder upon failure //bank govt
+
+Distributed Ledger:
+A database that exists across several locations or among multiple participants, decentralized to eliminate the need for a 
+central authority or intermediary to process, validate or authenticate transactions. 
+//The records are only ever stored in the ledger when the consensus has been reached by the parties involved.
+
+blockchain can be thought of blocks connected in a chain containing information
+A transaction is a value transfer; a block is a collection of transactions on the network, 
+gathered into a block that are hashed and added to the blockchain. 
+each block contains generally 3 elements --> transaction infos,hash,hash of previous block
+
+
+Decentralization- This is the most important feature of Blockchain technology which means that all the information is spread 
+across the network thus making is easily accessible and less pervasive to hacking.
+
+Immutability– The information once entered in the edger cannot be altered or changed. 
+Thus the security of data becomes a key feature of DLT or Distributed Ledger Technology.
+
+
+Security- Data security is the key feature of the Blockchain. All the data and information in the ledger is encrypted. 
+Thus it cannot be altered or changed.
+
+
+No third party interference– one of the key features that Blockchain offers is peer-to-peer interaction which means, 
+the two parties can directly interact with each other. It saves time as there is no need for the third party to approve the transaction.
+
+Cost saving- The primary objective of any new technology is to offer quick service which saves time and money. 
+Thankfully, Blockchain fits in both these parameters. 
+As mentioned above the absence of third-party saves time, similarly, 
+it also reduces the cost of the transaction by minimizing transaction or processing fees.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
